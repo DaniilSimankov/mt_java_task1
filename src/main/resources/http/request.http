@@ -1,0 +1,55 @@
+POST http://localhost:8080/api/tasks/create
+Content-Type: application/json
+
+{
+  "title": "Task 1",
+  "description": "Task 1 Description",
+  "dueDate": "2023-06-28",
+  "completed": false
+}
+
+###
+
+POST http://localhost:8080/api/tasks/create
+Content-Type: application/json
+
+{
+  "title": "Task 3",
+  "description": "Task 3 Description"
+}
+
+###
+
+GET http://localhost:8080/api/tasks/today?completed=false
+
+###
+
+GET http://localhost:8080/api/tasks/week?completed=true
+
+###
+
+GET http://localhost:8080/api/tasks/month?completed=true
+
+###
+
+POST http://localhost:8080/api/tasks/1/update
+Content-Type: application/json
+
+{
+  "title": "Updated Task 1",
+  "description": "Updated Task 1 Description",
+  "dueDate": "2023-07-06",
+  "completed": true
+}
+
+###
+
+POST http://localhost:8080/api/tasks/1/delete
+
+###
+
+POST http://localhost:8080/api/tasks/5/completed?completed=false
+
+###
+
+
